@@ -42,7 +42,24 @@ def split_lyrics_by_number(lyrics_and_sections, split_number):
 
 
 def split_by_font_size(lyrics_and_sections):
+    """
+    Parse lyrics by splitting them into separate lines.
 
+    Parameters
+    ----------
+    lyrics_and_sections : list of str
+        Lyrics to be parsed. Each element is a line in the song.
+        
+    Returns
+    -------
+    parsed_lyrics : list of str
+        Parsed lyrics, split by line. Each element is a line in the song. 
+
+    Example
+    -------
+    >>> split_by_font_size(["Some words are longer than 50 characters, so we need to split them."])
+    ['Some words are longer than 50 characters, so we need to', 'split them.']
+    """
     parsed_lyrics = []
 
     for lyric in lyrics_and_sections:
@@ -85,7 +102,6 @@ def get_rid_of_informative_lyrics(lyrics_and_sections):
 
 
 def make_powerpoint(font_size, split_lyrics_by, powerpoint_name, lyrics_and_sections):
-
     # split lyrics by ones
     lyrics_and_sections = lyrics_and_sections.split("\n")
 
@@ -142,7 +158,6 @@ def make_powerpoint(font_size, split_lyrics_by, powerpoint_name, lyrics_and_sect
 
 
 def main():
-    # give a title to our app
     st.title("Text to Powerpoint")
 
     font_size = st.number_input("Font size", value=50)
