@@ -166,7 +166,7 @@ def main():
 
     powerpoint_name = st.text_input("Powerpoint Name:", value="Powerpoint Name")
 
-    lyrics_and_sections = st.text_area("Lyrics:", value="Example Lyrics\nYay!")
+    lyrics_and_sections = st.text_area("Lyrics:", value="Example Lyrics\nYay!", height=500)
 
     make_powerpoint(font_size, split_lyrics_by, powerpoint_name, lyrics_and_sections)
 
